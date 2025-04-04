@@ -1,64 +1,113 @@
-# Go Fiber Boilerplate
+<div align="center">
+  <br />
+    <img src="https://i.ibb.co/xtTbHkfs/Readme-Thumbnail.png" alt="Project Banner">
+  <br />
+  
+  <div>
+    <img src="https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white" alt="node.js" />
+    <img src="https://img.shields.io/badge/express.js-000000?style=for-the-badge&logo=express&logoColor=white" alt="express.js" />
+    <img src="https://img.shields.io/badge/-MongoDB-13aa52?style=for-the-badge&logo=mongodb&logoColor=white" alt="mongodb" />
+  </div>
 
-A robust Go Fiber boilerplate following the Repository Pattern, designed for building scalable web applications.
+  <h3 align="center">Subscription Management System API</h3>
 
-## Features
+</div>
 
-- **Framework**: [Fiber](https://gofiber.io/) - Express-inspired web framework
-- **ORM**: [GORM](https://gorm.io/) with PostgreSQL
-- **Configuration**: [Viper](https://github.com/spf13/viper) for environment management
-- **Validation**: [Go Validator](https://github.com/go-playground/validator)
-- **Hot Reload**: [Air](https://github.com/cosmtrek/air) for development
-- **Code Generation**: [Gentool](https://gorm.io/gen) for DAO generation
-- **Migration tool**: [Migrate](https://github.com/golang-migrate/migrate) for running migration
-- **Database**: PostgreSQL
-- **Task Runner**: Makefile for common commands
-- **Database Transaction**: Middleware-based transaction handling for write operations (Create, Update, Delete) with automatic commit/rollback based on response status
-- **Swagger**: API documentation using [Swagger](github.com/gofiber/contrib/swagger)
+## 📋 Table of Contents
 
-## Project Structure
-| Directory | Description |
-|-----------|-------------|
-| `app/constants` | Application constants |
-| `app/controller` | HTTP request handlers |
-| `app/dao` | Data Access Objects |
-| `app/dto` | Data Transfer Objects |
-| `app/errors` | Custom error definitions |
-| `app/middleware` | HTTP middleware |
-| `app/model` | Database models |
-| `app/repository` | Data access layer |
-| `app/request` | Request models |
-| `app/response` | Response models |
-| `app/service` | Business logic |
-| `app/validator` | Request validation |
-| `bootstrap` | Application bootstrap |
-| `config` | Configuration |
-| `database` | Database migrations |
-| `docker` | Docker configurations |
-| `router` | Route definitions |
-| `utils` | Utility functions |
+1. 🤖 [Introduction](#introduction)
+2. ⚙️ [Tech Stack](#tech-stack)
+3. 🔋 [Features](#features)
+4. 🤸 [Quick Start](#quick-start)
+5. 🕸️ [Snippets (Code to Copy)](#snippets)
+6. 🚀 [More](#more)
 
+## 🤖 Introduction
 
-## Prerequisites
+This project is a **production-ready Subscription Management System API** designed to handle **real users, real transactions, and real business logic**. The system includes authentication, database integration, error handling, and more, ensuring scalability and seamless communication with frontend applications.
 
-- [Docker](https://www.docker.com/)
-- [Docker Compose](https://docs.docker.com/compose/)
+## ⚙️ Tech Stack
 
-## Getting Started
+- **Node.js**
+- **Express.js**
+- **MongoDB**
 
-1. Clone the repository:
+## 🔋 Features
+
+- **Advanced Rate Limiting & Bot Protection**
+- **Database Modeling** with MongoDB & Mongoose
+- **JWT Authentication** for secure access
+- **Global Error Handling** with validation and middleware
+- **Logging Mechanisms** for debugging and monitoring
+- **Automated Email Reminders** using workflow integrations
+- **Scalable API Architecture**
+
+## 🤸 Quick Start
+
+### Prerequisites
+
+Ensure you have the following installed:
+
+- [Git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/en)
+- [npm](https://www.npmjs.com/)
+
+### Cloning the Repository
+
 ```bash
-git clone https://github.com/yourusername/fiber-boilerplate.git
-cd fiber-boilerplate
+git clone https://github.com/your-username/subscription-tracker-api.git
+cd subscription-tracker-api
 ```
 
-2. Set up your environment variables
+### Installation
+
+Install the project dependencies:
+
 ```bash
-cp .env.example .env
+npm install
 ```
 
-3. Build the docker image, install dependency and run project
-```bash
-docker-compose build && docker-compose up -d
+### Set Up Environment Variables
+
+Create a `.env.local` file in the root directory and configure the following:
+
+```env
+PORT=5500
+SERVER_URL="http://localhost:5500"
+NODE_ENV=development
+DB_URI=
+JWT_SECRET=
+JWT_EXPIRES_IN="1d"
+EMAIL_PASSWORD=
 ```
 
+### Running the Project
+
+```bash
+npm run dev
+```
+
+Access the API at [http://localhost:5500](http://localhost:5500).
+
+## 🕸️ Snippets
+
+<details>
+<summary><code>Dummy JSON Data</code></summary>
+
+```json
+{
+  "name": "Elite Membership",
+  "price": 139.0,
+  "currency": "USD",
+  "frequency": "monthly",
+  "category": "Entertainment",
+  "startDate": "2025-01-20T00:00:00.000Z",
+  "paymentMethod": "Credit Card"
+}
+```
+
+</details>
+
+## 🚀 More
+
+For further development and enhancements, follow best practices in API architecture, security, and performance optimization.
